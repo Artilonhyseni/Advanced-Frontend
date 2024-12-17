@@ -84,7 +84,7 @@ body {
 
 
 .menu-item {
-  position: relative; /* For at kunne placere submenuen relativt */
+  position: relative; 
 }
 
 .menu-item a {
@@ -96,9 +96,9 @@ body {
 
 /* Submenu styling */
 .submenu {
-  display: none; /* Skjul submenu som standard */
+  display: none; 
   position: absolute;
-  top: 100%; /* Placer submenuen lige under forældreelementet */
+  top: 100%; 
   left: 0;
   background-color: #333;
   padding: 20px;
@@ -110,8 +110,8 @@ body {
 /* Vis submenu når man hover over menu-item */
 .menu-item:hover .submenu {
   display: grid; /* Vis submenu i grid-layout */
-  grid-template-columns: repeat(2, 1fr); /* 2 kolonner */
-  gap: 15px; /* Afstand mellem links */
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 15px; 
 }
 
 .submenu a {
@@ -121,7 +121,7 @@ body {
 }
 
 .submenu a:hover {
-  color: #ddd; /* Skift farve ved hover */
+  color: #ddd; 
 }
 
 
@@ -136,11 +136,11 @@ body {
     margin-top: 80px; 
     margin-bottom: 40px;
     padding: 20px;
-    z-index: 1000px; /* Juster afstanden fra header efter behov */
+    z-index: 1000px; 
   }
   
   .midt img {
-    max-width: 1200px; /* Eller den ønskede maksimale bredde */
+    max-width: 1200px; 
     width: 100%;
     height: auto;
     display: block;
@@ -332,7 +332,7 @@ align-items: center;
     text-decoration: underline;
   }
   
-  /* Grid til kategorier */
+  
   .categories-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -340,35 +340,35 @@ align-items: center;
     padding: 0 20px;
   }
   
-  /* Individuelle kategori-elementer */
+  
   .category-item {
     position: relative;
     border-radius: 10px;
-    overflow: hidden; /* Sørger for, at billedet ikke stikker ud */
+    overflow: hidden; 
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #f9f9f9; /* Lys baggrund */
+    background-color: #f9f9f9; 
   }
   
   .category-item:hover {
-    transform: translateY(-5px); /* Løft ved hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Skygge ved hover */
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
   }
   
   .category-icon {
     width: 100%;
-    height: 150px; /* Fast højde til billedet */
+    height: 150px; 
   }
   
   .category-icon-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Sørger for, at billedet fylder korrekt */
+    object-fit: cover; 
     transition: transform 0.3s ease;
   }
   
   .category-item:hover .category-icon-img {
-    transform: scale(1.1); /* Zoom-effekt på billedet ved hover */
+    transform: scale(1.1); 
   }
   
   .category-item p {
@@ -478,7 +478,7 @@ align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 400px; /* Ens højde til kort */
+  height: 400px; 
   background-color: #fff;
   text-align: left;
 }
