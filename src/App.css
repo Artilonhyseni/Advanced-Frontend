@@ -516,7 +516,7 @@ align-items: center;
   background-color: #000;
   color: white;
   padding: 40px 0 20px;
-  margin-top: 60px;
+  position: relative;
 }
 
 .footer-content {
