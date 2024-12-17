@@ -1,4 +1,3 @@
-// src/App.jsx
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./pages/Components/Header";
 import ProductOverview from "./pages/ProductsOverview";
@@ -10,13 +9,14 @@ import PCSection from './pages/Components/PC';
 import Footer from './pages/Components/Footer';
 import Login from "./pages/Components/Login";
 
+
 function HomePage() {
   return (
     <>
       <div className="midt">
         <img src="/Gaming.webp" alt="månedens-deal" />
       </div>
-      <Kategori />
+      <Kategori /> {/* Kategori inkluderet på forsiden */}
       <Produktsektion />
       <PCSection />
     </>
@@ -32,23 +32,18 @@ function App() {
           <Routes>
             {/* Forsiden */}
             <Route path="/" element={<HomePage />} />
-            {/* Product Overview */}
+            {/* Produktoversigt */}
             <Route path="/ProductOverview" element={<ProductOverview />} />
-            {/* Product Detail */}
+            {/* Produktdetaljer */}
             <Route path="/product/:id" element={<ProductDetail />} />
-            {/* Fallback for ukendte ruter */}
-
-
-            <Route path="*" element={<h1>Siden blev ikke fundet</h1>} />
-
+            {/* Login */}
             <Route path="/login" element={<Login />} />
+            {/* Fallback for ukendte ruter */}
+            <Route path="*" element={<h1>Siden blev ikke fundet</h1>} />
           </Routes>
         </div>
         <Footer />
       </div>
-    
-    
-
     </Router>
   );
 }

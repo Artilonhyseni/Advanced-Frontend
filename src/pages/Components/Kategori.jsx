@@ -1,11 +1,8 @@
-import React from "react";
-import { useNavigate } from "react-router-dom"; // Importer useNavigate til navigation
+import { Link } from "react-router-dom";
 
 const Kategori = () => {
-  const navigate = useNavigate(); // Initialiser navigationsfunktionen
-
   const kategori = [
-    { title: "Computere", icon: "Computer.webp", route: "/productoverview" }, // Tilføj route til Computere
+    { title: "Computere", icon: "Computer.webp", route: "/ProductOverview" }, 
     { title: "Gaming tastaturer", icon: "Tastatur.webp" },
     { title: "Headsets", icon: "Headset.webp" },
     { title: "Gamer muse", icon: "Mus.webp" },
@@ -13,41 +10,28 @@ const Kategori = () => {
     { title: "Gaming stole", icon: "Stole.webp" }
   ];
 
-  const handleCategoryClick = (route) => {
-    if (route) {
-      navigate(route); // Navigér til den angivne route
-    }
-  };
-
   return (
     <div className="categories-section">
       <div className="categories-header">
         <h2>UDVALGTE KATEGORIER</h2>
-        <a href="#" className="see-all">
+        <Link to="/ProductOverview" className="see-all">
           Se alle
-        </a>
+        </Link>
       </div>
 
       <div className="categories-grid">
-        {kategori.map((kategori, index) => (
-          <div
-            key={index}
-            className="category-item"
-            onClick={() => handleCategoryClick(kategori.route)} // Tilføj onClick hændelse
-            style={{ cursor: kategori.route ? "pointer" : "default" }} // Ændr cursor, hvis der er en route
-          >
-            <div className="category-icon">
-              {/* Bruger absolut sti til billederne */}
-              <img
-                src={kategori.icon}
-                alt={kategori.title}
-                className="category-icon-img"
-                onError={() =>
-                  console.log(`Fejl ved indlæsning af billede: ${kategori.icon}`)
-                }
-              />
-            </div>
-            <p>{kategori.title}</p>
+        {kategori.map((item, index) => (
+          <div key={index} className="category-item">
+            <Link to={item.route || "#"}> {/* Tilføj Link her */}
+              <div className="category-icon">
+                <img
+                  src={item.icon}
+                  alt={item.title}
+                  className="category-icon-img"
+                />
+              </div>
+              <p>{item.title}</p>
+            </Link>
           </div>
         ))}
       </div>

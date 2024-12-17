@@ -1,67 +1,49 @@
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "../App.css";
+import client from "./Components/contentfulClient";
 
-function ProductOverview() {
-  const products = [
-    { id: 1, name: "Prime #1 Gaming PC", price: 4999, image: "pc1.png" },
-    { id: 2, name: "Prime #2 Gaming PC", price: 5999, image: "pc2.png" },
-    { id: 3, name: "Top Fragger Gaming PC", price: 9999, image: "pc3.png" },
-    { id: 4, name: "Begynder Gaming PC", price: 3999, image: "pc4.png" },
-  ];
+const ProductOverview = () => {
+  const [products, setProducts] = useState([]);
+  const [error, setError] = useState(null);
 
-  // Simuler tilfældige anmeldelser
-  const randomReviews = [
-    "Fantastisk computer, kører som en drøm!",
-    "God værdi for pengene.",
-    "Jeg er meget tilfreds med ydelsen.",
-    "Hurtig levering og god service.",
-    "Perfekt til gaming, anbefales!",
-  ];
+  useEffect(() => {
+    client
+      .getEntries({ content_type: "product" }) // Hent alle produkter
+      .then((response) => {
+        console.log("Hentede produkter:", response.items); // Debug
+        setProducts(response.items);
+      })
+      .catch((error) => {
+        console.error("Fejl ved hentning af produkter:", error);
+        setError("Kunne ikke hente produkter.");
+      });
+  }, []);
 
-  function getRandomReview() {
-    return randomReviews[Math.floor(Math.random() * randomReviews.length)];
+  if (error) {
+    return <p>{error}</p>;
   }
 
   return (
     <div className="product-overview">
-      {/* Hero Section */}
-      <div className="hero">
-        <div className="hero-content">
-          <h1>Velkommen til Gaming Paradise</h1>
-          <p>Find din næste gaming computer her!</p>
-        </div>
-        <img
-          src="/Banner1.webp"
-          alt="Hero Gaming PC"
-          className="hero-image"
-        />
-      </div>
-
-      {/* Product List */}
-      <h2 className="section-title">Vores Produkter</h2>
-      <div className="product-list">
+      <h1>Produkter</h1>
+      <div className="product-grid">
         {products.map((product) => (
-          <div key={product.id} className="product-card">
-            <Link to={`/product/${product.id}`}>
+          <div key={product.sys.id} className="product-card">
+            {/* Brug det rigtige sys.id i Link */}
+            <Link to={`/product/${product.sys.id}`}>
               <img
-                src={`/${product.image}`}
-                alt={product.name}
-                className="product-image"
+                src={product.fields.image?.fields?.file?.url}
+                alt={product.fields.name || "Produktbillede"}
+                style={{ maxWidth: "200px" }}
               />
-            </Link>
-            <h3>{product.name}</h3>
-            <p>{product.price} kr.</p>
-            <p className="review">
-              <strong>Anmeldelse:</strong> "{getRandomReview()}"
-            </p>
-            <Link to={`/product/${product.id}`} className="btn view-details">
-              Se detaljer
+              <h2>{product.fields.name}</h2>
+              <p>Pris: {product.fields.price} kr.</p>
             </Link>
           </div>
         ))}
       </div>
     </div>
   );
-}
+};
 
 export default ProductOverview;
