@@ -8,6 +8,7 @@ import Kategori from './pages/Components/Kategori';
 import Produktsektion from './pages/Components/Produkter';
 import PCSection from './pages/Components/PC';
 import Footer from './pages/Components/Footer';
+import Login from "./pages/Components/Login";
 
 function HomePage() {
   return (
@@ -36,7 +37,11 @@ function App() {
             {/* Product Detail */}
             <Route path="/product/:id" element={<ProductDetail />} />
             {/* Fallback for ukendte ruter */}
+
+
             <Route path="*" element={<h1>Siden blev ikke fundet</h1>} />
+
+            <Route path="/login" element={<Login />} />
           </Routes>
         </div>
         <Footer />

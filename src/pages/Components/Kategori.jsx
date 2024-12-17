@@ -2,12 +2,12 @@ import React from "react";
 
 const Kategori = () => {
   const kategori = [
-    { title: "Computere", icon: "/Computer.webp" }, // Brug absolut sti i public-mappen
-    { title: "Gaming tastaturer", icon: "/Tastatur.webp" },
-    { title: "Headsets", icon: "/Headset.webp" },
-    { title: "Gamer muse", icon: "/Mus.webp" },
-    { title: "Gaming skærme", icon: "/Skærm.webp" },
-    { title: "Gaming stole", icon: "/Stole.webp" }
+    { title: "Computere", icon: "Computer.webp" }, // Brug absolut sti i public-mappen
+    { title: "Gaming tastaturer", icon: "Tastatur.webp" },
+    { title: "Headsets", icon: "Headset.webp" },
+    { title: "Gamer muse", icon: "Mus.webp" },
+    { title: "Gaming skærme", icon: "Skærm.webp" },
+    { title: "Gaming stole", icon: "Stole.webp" }
   ];
 
   return (

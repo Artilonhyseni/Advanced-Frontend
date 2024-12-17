@@ -4,7 +4,7 @@ import React from "react";
 const Kontakt = () => {
   return (
     <div className="kontakt-container">
-      {/* Kontaktformular */}
+    
       <section className="contact-section">
         <h1>Kontakt os</h1>
         <p>
@@ -26,7 +26,7 @@ const Kontakt = () => {
         </form>
       </section>
 
-      {/* Kontaktinformation */}
+    
       <section className="contact-info">
         <h2>KONTAKT GEEKD</h2>
         <p>
@@ -43,7 +43,7 @@ const Kontakt = () => {
         </p>
       </section>
 
-      {/* Åbningstider */}
+      
       <section className="store-info">
         <h2>GEEKDS ÅBNINGSTIDER</h2>
         <p>

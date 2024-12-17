@@ -33,7 +33,7 @@ function Header() {
 
   return (
     <header className="header">
-      {/* Top banner */}
+      
       <div className="top-banner">
         <span>
           Forlænget returret! Returner dine uåbnede varer helt indtil 31. Januar
@@ -59,8 +59,7 @@ function Header() {
             <div className="search-wrapper">
               <select className="search-select">
                 <option>Alle</option>
-                <option>Gaming PC</option>
-                <option>Tilbud</option>
+                
               </select>
 
               <input
@@ -75,7 +74,7 @@ function Header() {
           </div>
 
           <div className="icons-wrapper">
-          <Link to="/konto" className="icon-button">
+          <Link to="/login" className="icon-button">
           <img src="Konto.png" alt="Login" />
           </Link>
 
@@ -131,7 +130,11 @@ function Header() {
             <Link to="/brands">Brands</Link>
           </div>
           <div className="menu-item">
-            <Link to="/simulator">Simulator & Konsol</Link>
+            <Link to="/simulator">Simulator </Link>
+            
+          </div>
+          <div className="menu-item">
+            <Link to="/simulator">Konsol</Link>
           </div>
           
           <div className="menu-item">

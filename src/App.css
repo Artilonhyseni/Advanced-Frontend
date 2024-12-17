@@ -304,68 +304,79 @@ align-items: center;
 
 
   .categories-section {
-    max-width: 1200px;
-    margin: 80px auto 0;
-    padding: 0 20px;
-    margin-top: 40px;
-    position: relative;
-    z-index: 1; 
-    clear: both; 
+    margin: 40px 0;
+    text-align: center;
   }
   
   .categories-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    padding: 0 20px;
   }
   
   .categories-header h2 {
-    font-size: 24px;
+    font-size: 1.8rem;
     margin: 0;
+    color: #333;
   }
   
-  .see-all {
+  .categories-header .see-all {
+    color: #007bff;
     text-decoration: none;
-    color: #000;
+    font-size: 1rem;
   }
   
+  .categories-header .see-all:hover {
+    text-decoration: underline;
+  }
+  
+  /* Grid til kategorier */
   .categories-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
+    padding: 0 20px;
   }
   
+  /* Individuelle kategori-elementer */
   .category-item {
-    text-align: center;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden; /* Sørger for, at billedet ikke stikker ud */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f9f9f9; /* Lys baggrund */
+  }
+  
+  .category-item:hover {
+    transform: translateY(-5px); /* Løft ved hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Skygge ved hover */
   }
   
   .category-icon {
-    background-color: #2196f3;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 10px;
-    padding: 30px;
+    width: 100%;
+    height: 150px; /* Fast højde til billedet */
   }
   
-  .category-icon img {
-    width: 60%;
-    height: 60%;
-    object-fit: contain;
-    filter: brightness(0) invert(1); 
+  .category-icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Sørger for, at billedet fylder korrekt */
+    transition: transform 0.3s ease;
+  }
+  
+  .category-item:hover .category-icon-img {
+    transform: scale(1.1); /* Zoom-effekt på billedet ved hover */
   }
   
   .category-item p {
-    margin: 0;
-    font-size: 14px;
-    font-weight: 500;
-    filter: none;
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
   }
   
 
@@ -1018,6 +1029,76 @@ a {
   margin-top: 20px;
 }
 
-/* animation for forside  Artilon */ 
+/* Login - Artilon  */ 
 
+
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f8f8;
+  margin: 0;
+}
+
+
+.login-box {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+
+.logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+
+.login-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.login-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.login-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+
+.signup-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
 
