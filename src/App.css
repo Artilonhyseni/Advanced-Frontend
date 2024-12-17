@@ -20,23 +20,24 @@ body {
   }
 
 
-  .midten {
+  .midten, .hero{
   width: 100%;
   text-align: center;
   margin-bottom: 40px;
   position: relative;
   z-index: 1;
+  }
   
-  .midt {
+  .midt, .hero {
  width: 100%;
  text-align: center;
  margin-bottom: 40px;
 
   }
 
-  }
+  
 
-  .midt img {
+  .midt img, .hero-image {
 
   max-width: 1200px;
   width: 100%;
@@ -614,53 +615,42 @@ align-items: center;
 
 /* Generel styling
   /* Hero Section */
-.hero-section {
-  background: url('/path-to-background.jpg') no-repeat center center;
-  background-size: cover;
-  color: white;
-  text-align: center;
-  padding: 50px 20px;
-  background: linear-gradient(to right, #1a73e8, #4285f4);
-  color: white;
-}
-
-
-.hero-content {
-  max-width: 500px;
-  margin-right: 20px;
-}
-
-.hero h1 {
-  font-size: 3.5em;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.5em;
-  margin-bottom: 30px;
-}
-
-.hero .btn {
-  padding: 15px 30px;
-  background-color: white;
-  color: #4285f4;
-  font-size: 1.2em;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.hero .btn:hover {
-  background-color: #e6e6e6;
-}
-
-.hero-image {
-  max-width: 500px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
+  .hero {
+    padding-top: 8rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px; /* Tilpas højden efter behov */
+    overflow: hidden;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .hero-content {
+    position: absolute;
+    text-align: center;
+    color: white; /* Tekstfarve for kontrast */
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5); /* Halvgennemsigtig baggrund */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin: 10px 0 0;
+  }
+  
 
 @media (max-width: 768px) {
   .hero {
@@ -794,6 +784,7 @@ align-items: center;
   max-width: 900px;
   width: 100%;
   overflow: hidden;
+  padding-top: 5rem;
 }
 
 .image-section {
