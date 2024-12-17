@@ -1,14 +1,160 @@
 body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
   
+
+
+  .app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+
+  .content-wrapper {
+   margin-top: 160px;
+   width: 100%;
+  }
+
+
+  .midten {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+  
+  .midt {
+ width: 100%;
+ text-align: center;
+ margin-bottom: 40px;
+
+  }
+
+  }
+
+  .midt img {
+
+  max-width: 1200px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+
+  }
+
+  .main-content {
+
+  margin-top: 220px;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+
+  }
+
+  /* Artilon */
+
+  /* Hovedmenu styling */
+.main-nav .nav-content {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-item {
+  position: relative; 
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 15px;
+  display: block;
+}
+
+/* Dropdown-submenu */
+/* Hovedmenu styling */
+.main-nav .nav-content {
+  display: flex;
+  gap: 20px;
+}
+
+
+.menu-item {
+  position: relative; /* For at kunne placere submenuen relativt */
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 15px;
+  display: block;
+}
+
+/* Submenu styling */
+.submenu {
+  display: none; /* Skjul submenu som standard */
+  position: absolute;
+  top: 100%; /* Placer submenuen lige under forældreelementet */
+  left: 0;
+  background-color: #333;
+  padding: 20px;
+  min-width: 250px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+/* Vis submenu når man hover over menu-item */
+.menu-item:hover .submenu {
+  display: grid; /* Vis submenu i grid-layout */
+  grid-template-columns: repeat(2, 1fr); /* 2 kolonner */
+  gap: 15px; /* Afstand mellem links */
+}
+
+.submenu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+.submenu a:hover {
+  color: #ddd; /* Skift farve ved hover */
+}
+
+
+
+  
+
+  .midt {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px; 
+    margin-bottom: 40px;
+    padding: 20px;
+    z-index: 1000px; /* Juster afstanden fra header efter behov */
+  }
+  
+  .midt img {
+    max-width: 1200px; /* Eller den ønskede maksimale bredde */
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+
   .header {
     width: 100%;
-    position: fixed; /* Sørger for, at header er fastgjort øverst */
+    position: fixed; 
     top: 0;
     left: 0;
-    z-index: 1000; /* Sikrer, at header ligger øverst */
+    
+    z-index: 1000; 
+    background-color: #fff;
+    height: 80px;
   }
   
   .top-banner {
@@ -57,7 +203,7 @@ body {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Sørger for, at indholdet bliver placeret i bredden */
+    justify-content: space-between; 
     width: 100%;
   }
   
@@ -66,7 +212,7 @@ body {
   }
   
   .logo img {
-    height: 32px;
+    height: 50px;
   }
   
   .search-container {
@@ -136,6 +282,318 @@ body {
     color: white;
     text-decoration: none;
   }
+
+
+  .categories-section {
+    max-width: 1200px;
+    margin: 80px auto 0; /* 80px margin-top for at matche headerens højde */
+    padding: 0 20px;
+    margin-top: 40px;
+    position: relative;
+    z-index: 1; 
+    clear: both; 
+  }
+  
+  .categories-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .categories-header h2 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .see-all {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .category-item {
+    text-align: center;
+  }
+  
+  .category-icon {
+    background-color: #2196f3;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    padding: 30px;
+  }
+  
+  .category-icon img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    filter: brightness(0) invert(1); 
+  }
+  
+  .category-item p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    filter: none;
+  }
+  
+
+  /* produkt */ 
+
+  /* Sektionens styling */
+.gaming-pc-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Grid-layout for produkterne */
+.gaming-pc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Styling af produktkort */
+.product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background-color: #f4f4f4;
+}
+
+.product-info {
+  padding: 16px;
+}
+
+.product-subtitle {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.product-title {
+  font-size: 1.2rem;
+  margin: 8px 0;
+  color: #333;
+}
+
+.product-price {
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 8px 0;
+}
+
+.add-to-cart-btn {
+  background-color: #2196f3;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #1976d2;
+}
+
+
+/* Pc under delen - Artilon */ 
+
+.pc-section {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+.pc-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px; /* Ens højde til kort */
+  background-color: #fff;
+  text-align: left;
+}
+
+.pc-card img {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.pc-card h2 {
+  font-size: 1.5rem;
+  margin: 12px 0;
+  font-weight: bold;
+}
+
+.pc-card a {
+  color: #000;
+  text-decoration: underline;
+  font-size: 1rem;
+  margin-top: 8px;
+  display: inline-block;
+}
+
+.pc-card a:hover {
+  color: #007bff;
+}
+
+
+
+/* footer - Artilon */ 
+
+.footer {
+  background-color: #000;
+  color: white;
+  padding: 40px 0 20px;
+  margin-top: 60px;
+}
+
+.footer-content {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.footer-section input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  margin-top: 10px;
+}
+
+.payment-methods {
+  width: 100%;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.payment-methods img {
+  width: 35px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.footer-bottom {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border-top: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
 /* Generel styling
   /* Hero Section */
 .hero-section {
