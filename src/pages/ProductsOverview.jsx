@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../App.css"; // Stilark til fælles brug
+import "../App.css";
 
 function ProductOverview() {
   const products = [
@@ -18,7 +18,7 @@ function ProductOverview() {
           <p>Find din næste gaming computer her!</p>
         </div>
         <img
-          src="src/assets/hero-img.png"
+          src="/Banner1.webp"
           alt="Hero Gaming PC"
           className="hero-image"
         />
@@ -29,17 +29,15 @@ function ProductOverview() {
       <div className="product-list">
         {products.map((product) => (
           <div key={product.id} className="product-card">
-            {/* Klikbart billede */}
             <Link to={`/product/${product.id}`}>
               <img
-                src={`src/assets/${product.image}`}
+                src={`/${product.image}`}
                 alt={product.name}
                 className="product-image"
               />
             </Link>
             <h3>{product.name}</h3>
             <p>{product.price} kr.</p>
-            {/* "Se detaljer"-knap */}
             <Link to={`/product/${product.id}`} className="btn view-details">
               Se detaljer
             </Link>

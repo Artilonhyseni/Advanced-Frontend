@@ -8,7 +8,19 @@ import Kategori from './pages/Components/Kategori';
 import Produktsektion from './pages/Components/Produkter';
 import PCSection from './pages/Components/PC';
 import Footer from './pages/Components/Footer';
-import Kontakt from './pages/Kontakt'; // Import Kontakt-komponenten
+
+function HomePage() {
+  return (
+    <>
+      <div className="midt">
+        <img src="/Gaming.webp" alt="månedens-deal" />
+      </div>
+      <Kategori />
+      <Produktsektion />
+      <PCSection />
+    </>
+  );
+}
 
 function App() {
   return (
@@ -17,31 +29,21 @@ function App() {
         <Header />
         <div className="content-wrapper">
           <Routes>
-            {/* Forsiden viser alle de relevante komponenter */}
-            <Route 
-              path="/" 
-              element={
-                <>
-                  <div className="midt">
-                    <img src="/Gaming.webp" alt="månedens-deal" />
-                  </div>
-                  <Kategori />
-                  <Produktsektion />
-                  <PCSection />
-                </>
-              } 
-            />
-            
-            {/* Kun Kontakt-siden vises, når brugeren navigerer til /kontakt */}
-            <Route path="/kontakt" element={<Kontakt />} /> 
-
-            {/* Andre routes */}
+            {/* Forsiden */}
+            <Route path="/" element={<HomePage />} />
+            {/* Product Overview */}
             <Route path="/ProductOverview" element={<ProductOverview />} />
+            {/* Product Detail */}
             <Route path="/product/:id" element={<ProductDetail />} />
+            {/* Fallback for ukendte ruter */}
+            <Route path="*" element={<h1>Siden blev ikke fundet</h1>} />
           </Routes>
         </div>
         <Footer />
       </div>
+    
+    
+
     </Router>
   );
 }
