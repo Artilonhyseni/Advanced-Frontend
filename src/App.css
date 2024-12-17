@@ -241,7 +241,7 @@ align-items: center;
     object-fit: contain; 
     cursor: pointer; 
     transition: transform 0.2s ease; 
-    color: white;
+    
   }
   
   .search-select {
@@ -1026,3 +1026,7 @@ a {
 .store-info h3 {
   margin-top: 20px;
 }
+
+/* animation for forside  Artilon */ 
+
+

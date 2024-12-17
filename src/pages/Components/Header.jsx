@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 function Header() {
   const [searchQuery, setSearchQuery] = useState(``);
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+  
 
   const slides = [
     {
@@ -130,11 +131,9 @@ function Header() {
             <Link to="/brands">Brands</Link>
           </div>
           <div className="menu-item">
-            <Link to="/simulator">Simulator</Link>
+            <Link to="/simulator">Simulator & Konsol</Link>
           </div>
-          <div className="menu-item">
-            <Link to="/konsol">Konsol</Link>
-          </div>
+          
           <div className="menu-item">
             <Link to="/merch">Merch</Link>
           </div>
