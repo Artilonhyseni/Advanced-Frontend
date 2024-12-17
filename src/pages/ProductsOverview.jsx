@@ -9,6 +9,19 @@ function ProductOverview() {
     { id: 4, name: "Begynder Gaming PC", price: 3999, image: "pc4.png" },
   ];
 
+  // Simuler tilfældige anmeldelser
+  const randomReviews = [
+    "Fantastisk computer, kører som en drøm!",
+    "God værdi for pengene.",
+    "Jeg er meget tilfreds med ydelsen.",
+    "Hurtig levering og god service.",
+    "Perfekt til gaming, anbefales!",
+  ];
+
+  function getRandomReview() {
+    return randomReviews[Math.floor(Math.random() * randomReviews.length)];
+  }
+
   return (
     <div className="product-overview">
       {/* Hero Section */}
@@ -38,6 +51,9 @@ function ProductOverview() {
             </Link>
             <h3>{product.name}</h3>
             <p>{product.price} kr.</p>
+            <p className="review">
+              <strong>Anmeldelse:</strong> "{getRandomReview()}"
+            </p>
             <Link to={`/product/${product.id}`} className="btn view-details">
               Se detaljer
             </Link>
