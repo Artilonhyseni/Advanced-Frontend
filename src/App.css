@@ -236,11 +236,11 @@ align-items: center;
 }
 
   .icon-button img {
-    width: 24px; /* Fast bredde */
-    height: 24px; /* Fast højde */
-    object-fit: contain; /* Sørg for, at billedet passer pænt i boksen */
-    cursor: pointer; /* Gør det tydeligt, at det er klikbart */
-    transition: transform 0.2s ease; /* Tilføj en pæn hover-effekt */
+    width: 24px; 
+    height: 24px; 
+    object-fit: contain; 
+    cursor: pointer; 
+    transition: transform 0.2s ease; 
     color: white;
   }
   
@@ -304,7 +304,7 @@ align-items: center;
 
   .categories-section {
     max-width: 1200px;
-    margin: 80px auto 0; /* 80px margin-top for at matche headerens højde */
+    margin: 80px auto 0;
     padding: 0 20px;
     margin-top: 40px;
     position: relative;
@@ -953,4 +953,76 @@ align-items: center;
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+/* Kontakt - Artilon */ 
+
+.kontakt-container {
+  font-family: Arial, sans-serif;
+  color: #000;
+  line-height: 1.6;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 600px;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.contact-section p {
+  text-align: center;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.submit-btn {
+  background-color: black;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #333;
+}
+
+
+.contact-info,
+.store-info {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.store-info h3 {
+  margin-top: 20px;
 }
