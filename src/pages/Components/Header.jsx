@@ -41,14 +41,13 @@ function Header() {
         <button className="read-more-btn">Læs mere</button>
       </div>
 
-      {/* Support banner */}
       <div className="support-banner">
         <a href={slides[currentSlideIndex].link} className="slide-content">
           {slides[currentSlideIndex].text}
         </a>
       </div>
 
-      {/* Main header */}
+
       <div className="main-header">
         <div className="header-content">
           <Link to="/" className="logo">
@@ -59,6 +58,8 @@ function Header() {
             <div className="search-wrapper">
               <select className="search-select">
                 <option>Alle</option>
+                <option>Gaming PC</option>
+                <option>Tilbud</option>
               </select>
 
               <input
@@ -72,12 +73,20 @@ function Header() {
             </div>
           </div>
 
-          <div className="user-actions">
-            <Link to="/konto" className="icon-button"></Link>
-            <Link to="/kurv" className="icon-button"></Link>
+          <div className="icons-wrapper">
+          <Link to="/konto" className="icon-button">
+          <img src="Konto.png" alt="Login" />
+          </Link>
+
+          <Link to="/kurv" className="icon-button">
+          <img src="Kurv.png" alt="Kurv" />
+          </Link>
+
+          </div>
+
           </div>
         </div>
-      </div>
+     
 
       {/* Navigation */}
       <nav className="main-nav">

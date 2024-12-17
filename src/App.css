@@ -225,6 +225,24 @@ body {
     display: flex;
     align-items: center;
   }
+
+
+.icons-wrapper {
+
+display: flex;
+gap: 15px;
+align-items: center;
+
+}
+
+  .icon-button img {
+    width: 24px; /* Fast bredde */
+    height: 24px; /* Fast højde */
+    object-fit: contain; /* Sørg for, at billedet passer pænt i boksen */
+    cursor: pointer; /* Gør det tydeligt, at det er klikbart */
+    transition: transform 0.2s ease; /* Tilføj en pæn hover-effekt */
+    color: white;
+  }
   
   .search-select {
     position: absolute;
